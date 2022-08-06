@@ -1,0 +1,32 @@
+0. at command => AT
+1. at command => AT+CWMODE=1
+2. at command => AT+CWJAP="Smart Switch","subhajit"
+
+0. at command => AT
+1. at command => AT+RST
+2. at command => AT+CIPMUX=1
+3. at command => AT+CIPSTART=0,"TCP","api.thingspeak.com",80
+
+
+		AT+CIPSEND=0,50
+
+		GET /update?api_key=H2S9UHWZOSLWLVNB&field1=5
+
+		AT+CIPCLOSE=0
+
+GET /channels/402937/fields/1/last.txt?api_key=R9492HLLWZCD71PH
+GET /channels/402937/field/2/last.txt?api_key=R9492HLLWZCD71PH
+GET /channels/402937/field/2/last.json?api_key=R9492HLLWZCD71PH
+
+
+
+AT 
+AT+RST
+AT+CIPMUX=0
+AT+CIPSTART="TCP","api.thingspeak.com",80
+-+
+AT+CIPSEND=50
+
+GET /update?api_key=1LR8IUVBQP1U06AG&field1=5
+
+AT+CIPCLOSE
